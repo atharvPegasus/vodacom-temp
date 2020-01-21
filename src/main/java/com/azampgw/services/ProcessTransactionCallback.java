@@ -1,11 +1,13 @@
 package com.azampgw.services;
 
 
+import org.springframework.stereotype.Component;
+
 import com.azampgw.request.ATVMobile;
 import com.azampgw.request.TransactionCallback;
 import com.azampgw.response.CallbackResponse;
 
-
+@Component
 public class ProcessTransactionCallback {
 	
 	public CallbackResponse processTransactionalCallback(TransactionCallback request) {

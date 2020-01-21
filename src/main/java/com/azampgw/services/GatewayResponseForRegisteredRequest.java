@@ -1,10 +1,11 @@
 package com.azampgw.services;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.azampgw.request.GatewayResponseForRegistredRequest;
 
-@Service
+@Component
 public class GatewayResponseForRegisteredRequest {
 	
 	public void respondForRegisteredRequest(GatewayResponseForRegistredRequest requestToIntimateRegistration) {

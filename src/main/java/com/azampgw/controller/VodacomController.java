@@ -22,14 +22,15 @@ import com.azampgw.services.AcceptVodaTransaction;
 public class VodacomController {
 
 	
-	@Autowired
-	private AcceptVodaTransaction acceptVodaTransactions; 
+//	@Autowired
+	private AcceptVodaTransaction acceptVodaTransactions ; 
 	
-	@Autowired
-	private GatewayResponseForRegistredRequest responseForRegistredRequest;
+//	@Autowired
+	private GatewayResponseForRegistredRequest responseForRegistredRequest = new GatewayResponseForRegistredRequest();
 
-	@PostMapping("/incomingRequest")
+	@PostMapping(path="/incomingRequest",consumes = "application/xml", produces = "application/xml")
 	public ResponseEntity AcceptVodacomRequest(@Valid @RequestBody IncomingRequest incomingRequest, BindingResult bindingResult){
+		System.out.println("Came here ===>"+incomingRequest );
 		responseForRegistredRequest = acceptVodaTransactions.acceptVodaTransaction(incomingRequest);
 		if(bindingResult.hasErrors()) {
 			// Failed Error Condition

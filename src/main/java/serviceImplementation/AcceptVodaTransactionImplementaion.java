@@ -1,18 +1,18 @@
 package serviceImplementation;
 
-import org.springframework.stereotype.Service;
-
+import org.springframework.stereotype.Component;
 import com.azampgw.Base.Response;
 import com.azampgw.Base.VodaBaseResponse;
 import com.azampgw.request.GatewayResponseForRegistredRequest;
 import com.azampgw.response.IncomingRequest;
 import com.azampgw.services.AcceptVodaTransaction;
 
-@Service
+@Component
 public class AcceptVodaTransactionImplementaion implements AcceptVodaTransaction {
 	
 	public GatewayResponseForRegistredRequest acceptVodaTransaction (IncomingRequest request) {
 		
+		System.out.println("hiiihihi");
 		GatewayResponseForRegistredRequest response = new GatewayResponseForRegistredRequest();
 		Response baseResponse = new Response();
 		VodaBaseResponse vodaResponse = new VodaBaseResponse();

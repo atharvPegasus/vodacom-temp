@@ -1,11 +1,12 @@
 package serviceImplementation;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.azampgw.request.ATVMobile;
 
-@Service
+@Component
 public class CheckATVForTransaction {
 	
 	public Boolean checkATVTransactions(ATVMobile request) {
